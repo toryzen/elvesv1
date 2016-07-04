@@ -5,12 +5,12 @@
 ## 2.Thrift服务 ##
 
 	service AgentService{
-		//接口检测
-		string aliveCheck()
-		//指令接收器[异步]，接收来自Scheduler的指令
-		list<Reinstruct>  instructionInvokeAsync(1: list<Instruct> insList)
-		//指令接收器[同步]，接收来自Scheduler的指令
-		Reinstruct instructionInvokeSync(1: Instruct ins)
+	    //检查是否存活
+	    string aliveCheck()
+	    //指令接收器[异步]
+	    list<Reinstruct>  instructionInvokeAsync(1: list<Instruct> insList)
+	    //指令接收器[同步]
+	    Reinstruct instructionInvokeSync(1: Instruct ins)
 	}
 
 ## 3.配置参数 ##

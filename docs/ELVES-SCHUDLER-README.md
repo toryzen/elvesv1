@@ -1,17 +1,16 @@
 ### scheduler ###
 #### 1.简介 ####
-![](../designer/snapshot/scheduler.jpg)
+
  
 #### 2.Thrift服务 ####
 
-	//Scheduler面对Agent的接口
 	service SchedulerService{
-		//接口检测
-		string aliveCheck()
-		//异步返回结果处理器
-		string dataTransport(1:Reinstruct reins)
-		//指令中转器[同步]
-		string instructionTransit(1:string ip, 2:Instruct ins)
+	    //检查是否存活
+	    string aliveCheck()
+	    //异步返回结果处理器
+	    string dataTransport(1:Reinstruct reins)
+	    //指令中转器[同步]
+	    Reinstruct instructionTransit(1:Instruct ins)
 	}
 
 
